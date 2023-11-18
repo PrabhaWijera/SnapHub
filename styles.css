@@ -4,13 +4,17 @@
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
-html{
-    overflow-x:hidden;
+
+body {
+
+    overflow-x: hidden;
+    background: url("asetts/background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-body{
-    background:#39297b;
-    color: white;
-}
+
+/* Media Query for screens with a minimum width of 601px (larger screens) */
+
 h1{
     text-align: center;
     margin: 100px auto 50px;
@@ -21,10 +25,11 @@ form{
     max-width: 600px;
     margin: auto;
     height: 80px;
-    background: #434989;
+    background: transparent;
     display: flex;
     align-items: center;
     border-radius: 8px;
+
 }
 form input{
     flex: 1;
@@ -38,8 +43,9 @@ form input{
 }
 form button{
     padding: 0 40px;
-    height: 100%;
-    background: #ff3929;
+    width: 150px;
+    height: 50px;
+    background: black;
     color: white;
     font-size: 18px;
     border: 0;
@@ -47,10 +53,22 @@ form button{
     border-top-right-radius-radius:8px;
     border-bottom-right-radius: 8px;
     cursor: pointer;
+    border-radius: 20px;
+}
+form button:hover{
+    box-shadow: white;
 }
 ::placeholder{
     color: white;
     font-size: 18px;
+}
+#search-box{
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 60px;
+}
+#search-box::placeholder{
+    color: black;
 }
 #show-more-btn{
     background: #ff3929;
@@ -58,7 +76,7 @@ form button{
     border: 0;
     outline: 0;
     padding: 10px 20px;
-    border-radius: 4px;
+    border-radius: 20px;
     margin: 10px auto 100px;
     cursor: pointer;
     display: none;
@@ -69,10 +87,52 @@ form button{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
+    height: auto;
 }
 #search-result img{
     width: 100%;
     height: 230px;
     object-fit: cover;
     border-radius: 5px;
+}
+/* Existing styles */
+
+.footer {
+    background: black;
+    position: relative;
+    height: 190px;
+    background: url("asetts/background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Updated styles to address empty space near footer */
+
+@media only screen and (max-width: 600px) {
+    /* Add styles for small screens if needed */
+}
+
+@media only screen and (min-width: 601px) {
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+.navbar-brand {
+    width: 80px;
+    height: 50px;
+    position: relative;
+    bottom: 25px;
+}
+.navbar-brand img{
+    width: 100%;
+}
+.navbar{
+    width: 100%;
+    height: 100px;
+    background: url("asetts/background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
 }

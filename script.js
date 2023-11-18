@@ -48,7 +48,7 @@ searchForm.addEventListener("submit",(e) =>{
 
     page=1;
     searchImages();
-alert("wada")
+
 })
 
 showMoreBtn.addEventListener("click",()=>{
